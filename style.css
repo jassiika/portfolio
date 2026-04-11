@@ -280,3 +280,10 @@ nav a{
         height:auto;
     }
 }
+
+@media screen and (max-width:750px){
+    .project-container{
+        grid-template-columns:1fr;
+        padding:20px;
+    }
+}
