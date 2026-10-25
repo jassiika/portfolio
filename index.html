@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Portfolio</title>
+    <link rel="stylesheet" href="./style.css" > 
+    <style>
+        .main-content{
+            min-width:0;
+        }
+        .slider{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            margin-top:10px;
+        }
+        .grid-container{
+            display:flex;
+            grid-template-columns:none;
+            gap:20px;
+            padding:20px 10px;
+            overflow:hidden;
+            flex:1;
+            min-width:0;
+        }
+        .grid-container .item{
+            flex:0 0 120px;
+        }
+        .slider-btn{
+            flex:0 0 40px;
+            height:40px;
+            border:1px solid #3a3a3a;
+            border-radius:50%;
+            background-color:#1e1e1e;
+            color:#FFBF00;
+            font-size:1.6rem;
+            line-height:1;
+            padding-bottom:3px;
+            cursor:pointer;
+            transition:background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+        }
+        .slider-btn:hover:not(:disabled){
+            background-color:#FFBF00;
+            color:#1e1e1e;
+        }
+        .slider-btn:disabled{
+            opacity:0.3;
+            cursor:default;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="pfp.png" alt="pfp">
+                <h2>Jasika Narang</h2>
+                <p><span id="role">Frontend Developer</span><span class="cursor">|</span></p>
+            </div>
+            <div class="contact">
+                <div class="email">
+                    <h3 class="label">Email (click to copy)</h3>
+                    <a class="value" href="mailto:jasikanarang@gmail.com">jasikanarang@gmail.com</a>
+                </div>
+                <div class="location">
+                    <h3 class="label">Location</h3>
+                    <a class="value">Sonipat,Haryana</a>
+                </div>
+            </div>
+            <div class="social">
+                <a href="https://x.com/myself_jassiii"><img src="https://simpleicons.org/icons/x.svg" alt="twitter"></a>
+                <a href="https://github.com/jassiika"><img src="https://simpleicons.org/icons/github.svg"  alt="github"></a>
+                <a href="https://www.linkedin.com/in/jasika-narang"><img src="https://www.svgrepo.com/show/144030/linkedin-square-logo.svg"  alt="linkedin"></a>
+            </div>
+        </div>
+        <div class="main-content">
+
+            <!--navigation-->
+            <div id="navigation">
+                <nav>
+                    <a href="#about" class="active">About</a>
+                    <a href="#skills">My Skills</a>
+                    <a href="#edu">Education</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#achievements">Achievements</a>
+                </nav>
+            </div>
+
+            <!--about me-->
+            <div id="about" class="reveal">
+                <h2 class="heading">About Me</h2>
+                <div class="line"></div>
+                <p class="content">I am Jasika Narang, a B.Tech Computer Science Engineering student at SRM Institute of Science and Technology (expected graduation 2028, CGPA 8.95 after 2 years). I enjoy building clean, responsive frontends and secure backends with Node.js, MongoDB, JWT and bcrypt. I have solved 260+ problems on LeetCode and I am actively looking for internship opportunities where I can contribute, learn, and grow.</p>
+            </div>
+
+            <!--my skills-->
+            <div id="skills" class="reveal">
+                <h2 class="heading">My Skills</h2>
+                <div class="line"></div>
+                <div class="slider">
+                <button class="slider-btn prev" aria-label="Previous skills">&lsaquo;</button>
+                <div class="grid-container" id="skillsTrack">
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/html5.svg" alt="html icon">
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/css.svg" alt="css icon">
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/javascript.svg" alt="javascript icon">
+                        <h3>Javascript</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/nodedotjs.svg" alt="node.js icon">
+                        <h3>Node.js</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/mongodb.svg" alt="mongodb icon">
+                        <h3>MongoDB</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/python.svg" alt="python icon">
+                        <h3>Python</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/cplusplus.svg" alt="c++ icon">
+                        <h3>C++</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/openjdk.svg" alt="java icon">
+                        <h3>Java</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/streamlit.svg" alt="streamlit icon">
+                        <h3>Streamlit</h3>
+                    </div>
+                    <div class="item">
+                        <img src="https://simpleicons.org/icons/git.svg" alt="git & github icon">
+                        <h3>Git & Github</h3>
+                    </div>
+                </div>
+                <button class="slider-btn next" aria-label="Next skills">&rsaquo;</button>
+                </div>
+                <h3 class="subheading">Also familiar with</h3>
+                <div class="chips">
+                    <span>DSA</span>
+                    <span>DBMS</span>
+                    <span>Operating Systems</span>
+                    <span>Compiler Design</span>
+                    <span>CAO</span>
+                    <span>JWT Authentication</span>
+                    <span>bcrypt</span>
+                    <span>Problem Solving</span>
+                </div>
+            </div>
+
+            <!--education-->
+            <div id="edu" class="reveal">
+                <h2 class="heading">Education</h2>
+                <div class="line"></div>
+                <div class="edtech">
+                    <div class="ed1">
+                        <div class="year">2024-2028</div>
+                        <h3 class="degree">Bachelor of Technology in CSE</h3>
+                        <p class="college">SRM University Sonepat, Haryana</p>
+                        <p class="work">CGPA: 8.95 after 2 years. Core subjects include Data Structures, Algorithms, DBMS, Operating Systems, Compiler Design, CAO and Web Technologies. Actively developing projects to strengthen practical skills.</p>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="ed2">
+                        <div class="year">2022-2024</div>
+                        <h3 class="degree">Senior Secondary Education (XII)</h3>
+                        <p class="college">The Vivekanand School Narela, Delhi</p>
+                        <p class="work">Completed with 82.8% in Science stream (PCM) under CBSE.</p>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="ed3">
+                        <div class="year">2020-2022</div>
+                        <h3 class="degree">Secondary Education (X)</h3>
+                        <p class="college">The Vedic Era Progressive School Sonepat, Haryana</p>
+                        <p class="work">Completed with 94.8% under CBSE.</p>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="liner"></div>
+                </div>
+            </div>
+
+            <!--portfolio-->
+            <div id="portfolio" class="reveal">
+                <h2 class="heading">Portfolio</h2>
+                <div class="line"></div>
+                <div class="project-container">
+                    <div class="project">
+                        <img src="bank-system.png" alt="Bank Management System">
+                        <div class="card">
+                            <h3>Bank Management System <em class="status">Backend</em></h3>
+                            <p>Backend with user registration and login, using bcrypt for password hashing and JWT for authentication. A MongoDB transaction model stores user, amount, type (credit or debit) and date, with balance checking, transaction history, and validation that blocks a debit when the balance is insufficient.</p>
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>JWT</span>
+                            <span>bcrypt</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="smart-factory.png" alt="Smart Factory Prototype">
+                        <div class="card">
+                            <h3>Smart Factory Prototype <em class="status">Ongoing</em></h3>
+                            <p>A simulator that generates factory data, currently modeling temperature monitoring, with a Streamlit dashboard to visualize and verify the simulated output. Next up: extending it to more machine parameters.</p>
+                            <span>Python</span>
+                            <span>Streamlit</span>
+                        </div>
+                    </div>
+                    <div class="project">
+                        <img src="washing-machine.png" alt="Washing Machine Website">
+                        <div class="card">
+                            <h3>Washing Machine Website</h3>
+                            <p>A responsive product website with smooth transitions and a dynamic cart where users can add services such as ironing and cleaning.</p>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--achievements-->
+            <div id="achievements" class="reveal">
+                <h2 class="heading">Achievements</h2>
+                <div class="line"></div>
+                <div class="achv-container">
+                    <div class="achv">
+                        <h3 class="achv-number"><span class="count" data-target="260">0</span>+</h3>
+                        <p>Problems solved on LeetCode</p>
+                    </div>
+                    <div class="achv">
+                        <h3 class="achv-number">Hackathon</h3>
+                        <p>Participated in an online hackathon by Code Studio Unboxing Vlogs (1000+ participants) and built "Deadline Guardian" for the "Last Minute Saviour" theme. Received a participation certificate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="backToTop" aria-label="Back to top">&uarr;</button>
+    <div id="toast"></div>
+
+    <script src="./script.js"></script>
+    <script>
+        (function () {
+            const track = document.getElementById("skillsTrack");
+            const oldPrev = document.querySelector(".slider-btn.prev");
+            const oldNext = document.querySelector(".slider-btn.next");
+            const prev = oldPrev.cloneNode(true);
+            const next = oldNext.cloneNode(true);
+            oldPrev.replaceWith(prev);
+            oldNext.replaceWith(next);
+
+            const first = track.querySelector(".item");
+
+            function step() {
+                const w = first.offsetWidth + 20;
+                return Math.max(1, Math.floor(track.clientWidth / w)) * w;
+            }
+            function update() {
+                prev.disabled = track.scrollLeft <= 2;
+                next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+            }
+
+            prev.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: "smooth" }));
+            next.addEventListener("click", () => track.scrollBy({ left: step(), behavior: "smooth" }));
+            track.addEventListener("scroll", update);
+            window.addEventListener("resize", update);
+            update();
+        })();
+    </script>
+</body>
+</html>
